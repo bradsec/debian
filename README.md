@@ -1,4 +1,4 @@
-# Debian Linux - Notes
+# Debian Linux (including Ubuntu, PopOS) - Installation Notes, Hints & Tips
 
 ## Install Common Utilities and Applications
 - Most applications below require a desktop environment installed such as GNOME, LXDE etc.
@@ -91,22 +91,24 @@ Shortcut `ctrl-h`
 - Scroll down to Add-ons and select Flatpak and Snap Support
 
 ## Debian Swappiness
-### Check current (default 60)
+- If system has increased memory number can be reduced and may improve performance.
+- Check current (default 60)  
 `cat /proc/sys/vm/swappiness`
-### Modify by editting the /etc/sysctl.conf and add line below and reboot.
+- Modify by editting the /etc/sysctl.conf and add line below and reboot.  
 `vm.swappiness=10`
 
-## Debian increase boot speed edit grub loader /etc/default/grub and modify timeout from 5 to 0
+## Debian Increase Boot Speed'
+- Edit grub loader `/etc/default/grub` and modify timeout from 5 to 0  
 `GRUB_TIMEOUT=0`
-### Update GRUB and reboot to test
+- Update GRUB and reboot to test  
 `sudo update-grub`
 
 ## Chrome Extensions
-### https://chrome.google.com/webstore/category/extensions
+- https://chrome.google.com/webstore/category/extensions
 - GNOME Shell Integration
 
 ## GNOME Extensions
-### https://extensions.gnome.org
+- https://extensions.gnome.org
 - User Themes
 - TopIcons Plus
 
@@ -116,7 +118,7 @@ mkdir ~/.themes
 mkdir ~/.icons
 ```
 
-### Debian Distro Minimal Install Notes
+# Debian Distro Minimal Install Notes
 
 When prompted unselect all desktop and package options *(use mouse with graphical install or spacebar to unselect normal install)*. The base install should boot to a terminal as no X Window desktop environment should have been selected.
 
@@ -124,11 +126,13 @@ When prompted unselect all desktop and package options *(use mouse with graphica
 
 The mimimal install may mean the `sudo` command may not be installed.
 The following commands install the sudo package and adds the default (logged in user) to the sudo group.
+
 ```terminal
 su -c 'apt-get update && apt-get -y install sudo && \
 /sbin/usermod -aG sudo $USER && \
 exec su -l $USER'
 ```
+
 To undo the above (remove user from group sudo and remove package sudo) run the following:  
 ```terminal
 su -c 'gpasswd -d $USER sudo && \
