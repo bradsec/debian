@@ -3,6 +3,8 @@
 ## Install Common Utilities and Applications
 - Most applications below require a desktop environment installed such as GNOME, LXDE etc.
 - If running later versions of Debian or Ubuntu (Ubuntu 20.04+) packages should be in included package repositories and should not require additional apt sources.
+- You can copy and paste the commands below directly into a terminal to batch install the applications if required.
+- Other Debian applications which require more configuration to install have added to the [bashscripts](https://github.com/bradsec/bashscripts) repo and have simple installation menu options.
 ```terminal
 # Network and system terminal CLI tools
 sudo apt-get -y install net-tools curl wget nmap htop
@@ -37,7 +39,7 @@ sudo apt-get -y install kazam
 # Audio file tools
 sudo apt-get -y install audacity
 
-# Add video player, tools and codecs
+# Video player, tools and codecs
 sudo apt-get -y install vlc
 sudo apt-get -y install handbrake
 sudo apt-get -y install libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
