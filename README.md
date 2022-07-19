@@ -1,10 +1,10 @@
-# Debian Linux (including Ubuntu, PopOS) - Installation Notes, Hints & Tips
+# Debian Linux (including Kali, Ubuntu, PopOS)<br>Installation Notes, Hints & Tips
 
 ## Install Common Utilities and Applications
 - Most applications below require a desktop environment installed such as GNOME, LXDE etc.
-- If running later versions of Debian or Ubuntu (Ubuntu 20.04+) packages should be in included package repositories and should not require additional apt sources.
-- You can copy and paste the commands below directly into a terminal to batch install the applications if required.
-- Other Debian applications which require more configuration to install have added to the [bashscripts](https://github.com/bradsec/bashscripts) repo and have simple installation menu options.
+- Later versions of Debian or Ubuntu (Ubuntu 20.04+) should not require additional apt sources to install the packages listed below.
+- Copy and paste the commands below directly into a terminal to batch install the applications if required.
+- Other Debian applications which require more configuration to install have added to the [bradsec/bashscripts](https://github.com/bradsec/bashscripts) repo and have simple installation menu options.
 ```terminal
 # Network and system terminal CLI tools
 sudo apt-get -y install net-tools curl wget nmap htop
